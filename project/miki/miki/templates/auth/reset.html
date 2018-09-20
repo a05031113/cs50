@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<form action="/auth/reset" method="post" class="auth shadow-sm p-3 mb-5 bg-light rounded">
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Old Password</span>
+		</div>
+		<input type="password" class="form-control" placeholder="*****" name="current-password" aria-label="Current Password" aria-describedby="basic-addon1">
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">New Password</span>
+		</div>
+		<input type="password" class="form-control" placeholder="*****" name="new-password" aria-label="New Password" aria-describedby="basic-addon1">
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">New Password Again</span>
+		</div>
+		<input type="password" class="form-control" placeholder="*****" name="new-password-confirm" aria-label="New Password Again" aria-describedby="basic-addon1">
+	</div>
+	<button type="submit" class="btn btn-primary">Reset</button>
+</form>
+{% endblock %}

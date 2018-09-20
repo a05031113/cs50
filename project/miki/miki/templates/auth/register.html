@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+<form action="/auth/register" method="post" class="auth shadow-sm p-3 mb-5 bg-light rounded">
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Username</span>
+		</div>
+		<input type="text" class="form-control" placeholder="Username" name="username" aria-label="Username" aria-describedby="basic-addon1">
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Password</span>
+		</div>
+		<input type="password" class="form-control" placeholder="*****" name="password" aria-label="Username" aria-describedby="basic-addon1">
+	</div>
+	<button type="submit" class="btn btn-primary">Register</button>
+</form>
+{% endblock %}
